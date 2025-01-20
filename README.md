@@ -9,8 +9,8 @@
 
 ## API endpoints and their functionalities
 
-Base URL: http://localhost
-Content-Type: application/json
+### Base URL: http://localhost
+### Content-Type: application/json
 
 - [GET] - [Order Viewing Page](#Order-Viewing-Page) 
 - [GET] - [Detailed Order View](#Detailed-Order-View)  
