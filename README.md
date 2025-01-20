@@ -43,7 +43,7 @@ According to the specified requirements, concurrency control is used when updati
 - URL: [Base URL] /api/orders/{order id}
 - Description: Retrieves details about a specific order specified by #id. 
 		     
-Please substitute {order id} with desired order #id. 
+> Please substitute {order id} with desired order #id. 
 
 - Response: JSON array of paginated orders, along with associated products, with total count and links for next/prev pages
 
