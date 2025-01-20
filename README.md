@@ -48,7 +48,7 @@ According to the specified requirements, concurrency control is used when updati
 
 > es. [Base URL] /api/orders?fromdate=2025-01-01&todate=2025-12-31&name=ord&description=ord
 
-### Errors
+### Possible Errors
 |Error code|Error Description|
 |---|---|
 |422| Validation error|
