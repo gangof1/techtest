@@ -131,9 +131,43 @@ According to the specified requirements, concurrency control is used when updati
 > ##### *Please substitute {order id} with desired order #id. 
 > ##### es. [Base URL] /api/orders/1
 
+### Possible Errors
+|Error code|Error Description|
+|---|---|
+|422| Validation error|
 
+### Response (on success) example
+```java
+{
+    "id": 4,
+    "name": "Order Consequatur.",
+    "description": "Sapiente dicta debitis deserunt repellat quos magnam ullam sit optio culpa.",
+    "date": "2025-01-02 12:04:31",
+    "created_at": "2025-01-19T14:47:37.000000Z",
+    "updated_at": "2025-01-19T14:47:37.000000Z",
+    "products": [
+        {
+            "id": 1,
+            "name": "quaerat",
+            "price": "471.51",
+            "stock": 7,
+            "created_at": "2025-01-19T14:38:50.000000Z",
+            "updated_at": "2025-01-19T16:17:23.000000Z",
+            "quantity": 1
+        },
+        {
+            "id": 5,
+            "name": "modi",
+            "price": "491.52",
+            "stock": 10,
+            "created_at": "2025-01-19T14:38:50.000000Z",
+            "updated_at": "2025-01-19T14:38:50.000000Z",
+            "quantity": 1
+        }
+    ]
+}
 
-
+```
 # Create Order 
 
 # Update Order
