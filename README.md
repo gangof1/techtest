@@ -128,8 +128,7 @@ According to the specified requirements, concurrency control is used when updati
 - Response: JSON array of paginated orders, along with associated products, with total count and links for next/prev pages
 - Response (on failure): JSON reporting error code and message
 
-> *Please substitute {order id} with desired order #id. 
-> es. [Base URL] /api/orders/1
+> *Please substitute {order id} with desired order #id. (es. [Base URL] /api/orders/1)
 
 
 
