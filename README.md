@@ -1,10 +1,10 @@
 ## API endpoints and their functionalities
 
-- [GET] #Order-Viewing-Page 
-- [GET] #Detailed-Order-View 
-- [POST] #Create-Order
-- [PUT] #Update-Order 
-- [DELETE] #Delete-Order 
+- [GET] #-Order-Viewing-Page 
+- [GET] #-Detailed-Order-View 
+- [POST] #-Create-Order
+- [PUT] #-Update-Order 
+- [DELETE] #-Delete-Order 
 
 ## General purposes
 
