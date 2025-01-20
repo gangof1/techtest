@@ -12,6 +12,7 @@
 #### Base URL: http://localhost
 #### Content-Type: application/json
 
+## Endpoints:
 - [GET] - [Order Viewing Page](#Order-Viewing-Page) 
 - [GET] - [Detailed Order View](#Detailed-Order-View)  
 - [POST] - [Create Order](#Create-Order) 
