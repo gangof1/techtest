@@ -35,6 +35,17 @@ According to the specified requirements, concurrency control is used when updati
 - URL: [Base URL] /api/orders
 - Description: Retrieves a list of orders with pagination and filtering options
 
+# Query Parameters
+
+|name|type|mandatory|description|
+|---|---|---|---|
+|fromdate| date, YYYY-mm-dd| NO| Filter orders created after this date, >= operator|
+|todate| date, YYYY-mm-dd| NO| Filter orders created before this date, <= operator|
+|name| string| NO| Search for orders containing this name|
+|description| string| NO| Search for orders containing this description|
+
+> es. [Base URL] /api/orders?fromdate=2025-01-01&todate=2025-12-31&name=ord&description=ord
+
 - Response: JSON array of paginated orders with total count and links for next/prev pages
 
 
@@ -44,8 +55,15 @@ According to the specified requirements, concurrency control is used when updati
 - Description: Retrieves details about a specific order specified by #id. 
 		     
 > Please substitute {order id} with desired order #id. 
+> es. [Base URL] /api/orders/1
 
 - Response: JSON array of paginated orders, along with associated products, with total count and links for next/prev pages
+
+```java
+public static void main(String[] args) {
+//TODO
+}
+```
 
 # Create Order 
 
