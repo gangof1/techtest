@@ -7,12 +7,12 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## API endpoints and their functionalities
+## API endpoints
 
 #### Base URL: http://localhost
 #### Content-Type: application/json
 
-## Endpoints:
+
 - [GET] - [Order Viewing Page](#Order-Viewing-Page) 
 - [GET] - [Detailed Order View](#Detailed-Order-View)  
 - [POST] - [Create Order](#Create-Order) 
@@ -123,11 +123,12 @@ According to the specified requirements, concurrency control is used when updati
 
 # Detailed Order View
 - Method: GET
-- URL: [Base URL] /api/orders/{order id}
+- URL: [Base URL] /api/orders/{order id}*
 - Description: Retrieves details about a specific order specified by #id. 
 - Response: JSON array of paginated orders, along with associated products, with total count and links for next/prev pages
+- Response (on failure): JSON reporting error code and message
 
-> Please substitute {order id} with desired order #id. 
+> *Please substitute {order id} with desired order #id. 
 > es. [Base URL] /api/orders/1
 
 
