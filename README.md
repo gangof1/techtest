@@ -31,6 +31,47 @@ This project aims to follow coding best practices, respecting S.O.L.I.D principl
 
 According to the specified requirements, concurrency control is used when updating or deleting orders to prevent race conditions (pessimistic locking,  locks + transactions) 
 
+## Requirements
+- Git Installed <a href="https://git-scm.com/downloads">official Git website</a>
+- <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>
+- macOS 10.14 or later, or Windows 10/11 (Pro/Enterprise), or a modern Linux distribution
+- PHP ^8.2 (8.4)
+
+## Installation Setup 
+- Create a folder and clone this repo from github
+```java
+git clone https://github.com/gangof1/techtest.git ./
+```
+- Copy .env.sample file in the root of the project to .env file
+```java
+cp .env.sample .env
+```
+- install the application's dependencies executing the following comman <a href="https://laravel.com/docs/11.x/sail#installing-composer-dependencies-for-existing-projects">Official Larevel Hints</a>
+```java
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php84-composer:latest \
+    composer install --ignore-platform-reqs
+```
+- Start all of the Docker containers (in background mode)
+```java
+./vendor/bin/sail up -d
+```
+- Run application's database migrations and seed products table
+```java
+./vendor/bin/sail php artisan migrate --seed
+```
+- This will:
+* Run all database migrations to set up the necessary tables.
+* Seed the products table with some initial data.
+
+### Note: Only the products table will be populated during this initial seeding. The orders table will be empty at this point
+### You can create an order by using the appropriate API endpoint.
+### Once at least one order is created, you can then proceed to perform actions like update, delete, or any other API calls that require existing order data.
+
+
 # Order Viewing Page
 - Method: GET
 - URL: [Base URL] /api/orders
