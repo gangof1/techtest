@@ -1,6 +1,23 @@
+## API endpoints and their functionalitiesatures 
 
+- [GET] #Order-Viewing-Page 
+- [GET] #Detailed-Order-View 
+- [POST] #Create-Order
+- [PUT] #Update-Order 
+- [DELETE] #Delete-Order 
 
-## About Laravel
+## General purposes
+
+This project aims to follow coding best practices, respecting S.O.L.I.D principles: 
+
+- Single Responsibility Principle (SRP)
+- Open-Closed Principle (OCP)
+- Liskov Substitution Principle (LSP) 
+- Interface Segregation Principle (ISP) 
+- Dependency Inversion Principle (DIP).
+
+According to the specified requirements, concurrency control is used when updating or deleting orders to prevent race conditions (pessimistic locking,  locks + transactions) 
+
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
