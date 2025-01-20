@@ -27,10 +27,11 @@ According to the specified requirements, concurrency control is used when updati
 - Description: Retrieves a list of orders with pagination and filtering options
 
 # Detailed Order View
-Method: GET
-URL: [Base URL] /api/orders/{order id}
-Description: Retrieves details about a specific order specified by #id. 
-		     Please substitute {order id} with desired order #id. 
+- Method: GET
+- URL: [Base URL] /api/orders/{order id}
+- Description: Retrieves details about a specific order specified by #id. 
+		     
+Please substitute {order id} with desired order #id. 
 
 # Create Order 
 
