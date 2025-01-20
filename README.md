@@ -35,7 +35,7 @@ According to the specified requirements, concurrency control is used when updati
 - Method: GET
 - URL: [Base URL] /api/orders
 - Description: Retrieves a list of orders with pagination and filtering options
-- Response: JSON array of paginated orders with total count and links for next/prev pages
+- Response: JSON object of paginated orders with total count and links for next/prev pages
 - Response (on failure): JSON reporting error code and message
 
 ## Query Parameters
@@ -125,7 +125,7 @@ According to the specified requirements, concurrency control is used when updati
 - Method: GET
 - URL: [Base URL] /api/orders/{order id}*
 - Description: Retrieves details about a specific order specified by #id. 
-- Response: JSON array of paginated orders, along with associated products, with total count and links for next/prev pages
+- Response: JSON object of paginated orders, along with associated products, with total count and links for next/prev pages
 - Response (on failure): JSON reporting error code and message
 
 > ##### *Please substitute {order id} with desired order #id. 
@@ -169,6 +169,74 @@ According to the specified requirements, concurrency control is used when updati
 
 ```
 # Create Order 
+- Method: POST
+- URL: [Base URL] /api/orders
+- Description: Creates a new order
+- Response: JSON object representing the newly created order with associated products
+- Response (on failure): JSON reporting error code and message
+
+### Request Body (JSON)
+```java
+{
+    "name": "ordine di test",
+    "description": "ordine di test",
+    "date": "2025-01-17 16:00:00",
+    "products": [
+        { "id": 1, "quantity": 1 },
+        { "id": 2, "quantity": 1 }
+    ]
+}
+
+```
+
+## Attributes
+
+|name|type|mandatory|description|
+|---|---|---|---|
+|name| string (unique)| YES| Name of the order|
+|description| string| NO| Description of the order|
+|date| date, YYYY-mm-dd hh:mm:ss| YES| Date of the order |
+|products| array of products| YES| Array of distinct product IDs with quantities|
+
+
+### Possible Errors
+|Error code|Error Description|
+|---|---|
+|422| Validation error|
+|400| Bad Request (stock is not enough?)|
+
+### Response (on success) example
+```java
+{
+    "name": "ordine di test",
+    "description": "ordine di test",
+    "date": "2025-01-17 16:00:00",
+    "updated_at": "2025-01-20T15:51:01.000000Z",
+    "created_at": "2025-01-20T15:51:01.000000Z",
+    "id": 6,
+    "products": [
+        {
+            "id": 1,
+            "name": "quaerat",
+            "price": "471.51",
+            "stock": 6,
+            "created_at": "2025-01-19T14:38:50.000000Z",
+            "updated_at": "2025-01-20T15:51:01.000000Z",
+            "quantity": 1
+        },
+        {
+            "id": 2,
+            "name": "nam",
+            "price": "346.14",
+            "stock": 4,
+            "created_at": "2025-01-19T14:38:50.000000Z",
+            "updated_at": "2025-01-20T15:51:01.000000Z",
+            "quantity": 1
+        }
+    ]
+}
+
+```
 
 # Update Order
 
