@@ -38,7 +38,7 @@ According to the specified requirements, concurrency control is used when updati
 - PHP ^8.2 (8.4)
 
 ## Installation Setup 
-- Create a folder and clone this repo from github
+- Create a folder and clone this repo from github (digit token when asked to entry password)
 ```java
 git clone https://github.com/gangof1/techtest.git ./
 ```
