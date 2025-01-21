@@ -77,6 +77,32 @@ docker run --rm \
 * 100 Products will have been created too, each with stock set to 500. 
 * Consider starting creating a new order or pick an order having #id between 1-500 to test any other API call that require existing order data.
 
+## Testing 
+In the root of the project, execute
+```java
+./vendor/bin/sail php artisan test
+```
+to run all APIs tests
+
+ 
+##### Order Viewing Page
+- [x] it returns a successful response
+- [x] it filters by date when provided
+- [x] it handles wrong date when provided
+- [x] index method performance
+##### Detailed Order View
+- [x] it returns a successful response
+- [x] it returns products belonging to order
+##### Create Order
+- [x] route is valid
+- [x] it validates the input data
+- [x] it returns an error if stock is not enough
+- [x] it returns an error if products are not unique
+- [x] store success
+##### Update Order
+- [x] it updates order with valid data
+##### Delete Order
+- [x] it delete order 
 
 # Order Viewing Page
 - Method: GET
