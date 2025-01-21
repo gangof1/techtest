@@ -65,11 +65,9 @@ docker run --rm \
 ```
 - This will:
 * Run all database migrations to set up the necessary tables.
-* Seed the products table with some initial data.
+* Seed tables with some initial data.
 
-#### Note: Only the products table will be populated during this initial seeding. The orders table will be empty at this point
-#### You can create an order by using the appropriate API endpoint.
-#### Once at least one order is created, you can then proceed to perform actions like update, delete, or any other API calls that require existing order data.
+#### Note: At this point 500 orders would have been created, each order with 1/2 products assigned with a fixed quantity: 1. 100 Products would have been created too, each with stock set to 500. Consider starting creating a new order or pick an order having #id between 1-500 to test any other API call that require existing order data.
 
 
 # Order Viewing Page
