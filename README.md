@@ -93,6 +93,7 @@ docker run --rm \
 |todate| date, YYYY-mm-dd| NO| Filter orders created before this date, <= operator|
 |name| string| NO| Search for orders containing this name|
 |description| string| NO| Search for orders containing this description|
+|page|integer| NO| page number|
 
 > es. [Base URL] /api/orders?fromdate=2025-01-01&todate=2025-12-31&name=ord&description=ord
 
