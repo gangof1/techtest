@@ -21,7 +21,7 @@
 
 ## General purposes
 
-This project aims to follow coding best practices, respecting S.O.L.I.D principles: 
+This project aims to follow coding best practices, respecting DRY (Don't Repeat Yourself), KISS(Keep it simple) and S.O.L.I.D principles: 
 
 - Single Responsibility Principle (SRP)
 - Open-Closed Principle (OCP)
@@ -29,7 +29,12 @@ This project aims to follow coding best practices, respecting S.O.L.I.D principl
 - Interface Segregation Principle (ISP) 
 - Dependency Inversion Principle (DIP).
 
+## Logic
 According to the specified requirements, concurrency control is used when updating or deleting orders to prevent race conditions (pessimistic locking,  locks + transactions) 
+
+## Security
+Though not implemented at present, API's are supposed to be, in a future release, accessible only through "personal access tokens" (Laravel Sacntum, token should be included in the Authorization header as a Bearer token)
+To prevent SQL Injections, the app makes use of validation of user inputs and of Eloquent ORM (parameterized queries, SQL bindings) 
 
 ## Requirements
 - Git Installed <a href="https://git-scm.com/downloads">official Git website</a>
@@ -68,7 +73,7 @@ docker run --rm \
 * Seed tables with some initial data.
 
 #### Hints:
-* 500 orders will have been created, each order with 1/2 products assigned with a fixed quantity: 1. 
+* 500 orders will have been created, each order with 1 or 2 products assigned with a fixed quantity: 1. 
 * 100 Products will have been created too, each with stock set to 500. 
 * Consider starting creating a new order or pick an order having #id between 1-500 to test any other API call that require existing order data.
 
