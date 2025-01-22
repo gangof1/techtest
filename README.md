@@ -74,7 +74,7 @@ docker run --rm \
 
 #### Hints:
 * 500 orders will have been created, each order with 1 or 2 products assigned with a fixed quantity: 1. 
-##### for testing purposes each order will have `Order ....` as name and ´Order description ...´ as descritpion
+  * for testing purposes each order will have `Order ....` as name and ´Order description ...´ as descritpion
 * 100 Products will have been created too, each with stock set to 500. 
 * Consider starting creating a new order or pick an order having #id between 1-500 to test any other API call that require existing order data.
 
