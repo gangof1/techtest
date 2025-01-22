@@ -32,6 +32,8 @@ This project aims to follow coding best practices, respecting DRY (Don't Repeat 
 ## Logic
 According to the specified requirements, concurrency control is used when updating or deleting orders to prevent race conditions (pessimistic locking,  locks + transactions) 
 
+To Enhance order search functionality API Order Viewing Page interacts with Laravel Scout/Meilisearch  to implement indexing solution to manage efficient searching and filtering
+
 ## Security
 Though not implemented at present, API's are supposed to be, in a future release, accessible only through "personal access tokens" (Laravel Sacntum, token should be included in the Authorization header as a Bearer token)
 To prevent SQL Injections, the app makes use of validation of user inputs and of Eloquent ORM (parameterized queries, SQL bindings) 
@@ -74,7 +76,7 @@ docker run --rm \
 
 #### Hints:
 * 500 orders will have been created, each order with 1 or 2 products assigned with a fixed quantity: 1. 
-  * for testing purposes each order will have '`Order ....`' as name and '`Order description ...`' as descritpion
+  * for testing purposes orders will be dated between '`2025-01-01`', '`2025-03-31`' and each one will have '`Order ....`' as name and '`Order description ...`' as descritpion
 * 100 Products will have been created too, each with stock set to 500. 
 * Consider starting creating a new order or pick an order having #id between 1-500 to test any other API call that require existing order data.
 
@@ -393,9 +395,7 @@ to run all APIs tests
  
 ##### Order Viewing Page
 - [x] it returns a successful response
-- [x] it filters by date when provided
 - [x] it handles wrong date when provided
-- [x] index method performance
 ##### Detailed Order View
 - [x] it returns a successful response
 - [x] it returns products belonging to order
@@ -407,5 +407,7 @@ to run all APIs tests
 - [x] store success
 ##### Update Order
 - [x] it updates order with valid data
+- [x] it returns an error if products are not defined
+- [x] it returns an error if product have quantity set to zero
 ##### Delete Order
 - [x] it delete order 
