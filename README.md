@@ -32,7 +32,7 @@ This project aims to follow coding best practices, respecting DRY (Don't Repeat 
 ## Logic
 According to the specified requirements, concurrency control is used when updating or deleting orders to prevent race conditions (pessimistic locking,  locks + transactions) 
 
-To Enhance order search functionality API Order Viewing Page interacts with Laravel Scout/Meilisearch  to implement indexing solution to manage efficient searching and filtering
+To Enhance order search functionality, API Order Viewing Page interacts with Laravel Scout/Meilisearch  to implement indexing solution to manage efficient searching and filtering
 
 ## Security
 Though not implemented at present, API's are supposed to be, in a future release, accessible only through "personal access tokens" (Laravel Sacntum, token should be included in the Authorization header as a Bearer token)
