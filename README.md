@@ -74,13 +74,14 @@ docker run --rm \
 
 #### Hints:
 * 500 orders will have been created, each order with 1 or 2 products assigned with a fixed quantity: 1. 
+##### for testing purposes each order will have `Order ....` as name and ´Order description ...´ as descritpion
 * 100 Products will have been created too, each with stock set to 500. 
 * Consider starting creating a new order or pick an order having #id between 1-500 to test any other API call that require existing order data.
 
 # Order Viewing Page
 - Method: GET
 - URL: [Base URL] /api/orders
-- Description: Retrieves a list of orders with pagination and filtering options
+- Description: Retrieves a list of orders - ordered by date desc - with pagination and filtering options
 - Response: JSON object of paginated orders with total count and links for next/prev pages
 - Response (on failure): JSON reporting error code and message
 
@@ -88,8 +89,8 @@ docker run --rm \
 
 |name|type|mandatory|description|
 |---|---|---|---|
-|fromdate| date, YYYY-mm-dd| NO| Filter orders created after this date, >= operator|
-|todate| date, YYYY-mm-dd| NO| Filter orders created before this date, <= operator|
+|fromdate| date, YYYY-mm-dd| NO| Filter orders created after this date, >= operator considering start of the day|
+|todate| date, YYYY-mm-dd| NO| Filter orders created before this date, <= operator considering end of the day|
 |name| string| NO| Search for orders containing this name|
 |description| string| NO| Search for orders containing this description|
 |page|integer| NO| page number|
