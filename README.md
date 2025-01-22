@@ -32,20 +32,19 @@ This project aims to follow coding best practices, respecting DRY (Don't Repeat 
 ## Logic
 According to the specified requirements, concurrency control is used when updating or deleting orders to prevent race conditions (pessimistic locking,  locks + transactions) 
 
-To Enhance order search functionality, API Order Viewing Page interacts with Laravel Scout/Meilisearch  to implement indexing solution to manage efficient searching and filtering
+To enhance order search functionality, API Order Viewing Page interacts with Laravel Scout/Meilisearch  to implement indexing solution to manage efficient searching and filtering
 
 ## Security
 Though not implemented at present, API's are supposed to be, in a future release, accessible only through "personal access tokens" (Laravel Sacntum, token should be included in the Authorization header as a Bearer token)
 To prevent SQL Injections, the app makes use of validation of user inputs and of Eloquent ORM (parameterized queries, SQL bindings) 
 
 ## Requirements
-- Git Installed <a href="https://git-scm.com/downloads">official Git website</a>
-- <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>
 - macOS 10.14 or later, or Windows 10/11 (Pro/Enterprise), or a modern Linux distribution
-- PHP ^8.2 (8.4)
+- Git Installed <a href="https://git-scm.com/downloads">official Git website</a>
+- <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a> installed
 
 ## Installation Setup 
-- Create a folder and clone this repo from github (digit token when asked to entry password)
+- Create a folder and, from within it, clone this repo from github (digit token when asked to entry password)
 ```java
 git clone https://github.com/gangof1/techtest.git ./
 ```
@@ -73,6 +72,8 @@ docker run --rm \
 - This will:
 * Run all database migrations to set up the necessary tables.
 * Seed tables with some initial data.
+
+- Test APIs by 
 
 #### Hints:
 * 500 orders will have been created, each order with 1 or 2 products assigned with a fixed quantity: 1. 
@@ -175,7 +176,7 @@ docker run --rm \
 - Method: GET
 - URL: [Base URL] /api/orders/{order id}*
 - Description: Retrieves details about a specific order specified by #id. 
-- Response: JSON object of paginated orders, along with associated products, with total count and links for next/prev pages
+- Response: JSON object displaying order information along with associated products
 - Response (on failure): JSON reporting error code and message
 
 > ##### *Please substitute {order id} with desired order #id. 
