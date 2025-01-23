@@ -43,16 +43,6 @@ To prevent SQL Injections, the app makes use of validation of user inputs and of
 - Git Installed <a href="https://git-scm.com/downloads">official Git website</a>
 - <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a> installed
 
-## Documentation
-- [Setup Guide](docs/setup.md)
-- [Consuming API Guide](docs/api.md)
-    * [Order Viewing Page](docs/api_order_viewing_page.md)
-    * [Detailed Order View](docs/api_detailed_order_view.md)
-    * [Create Order](docs/api_crate_order.md)
-    * [Update Order](docs/api_update_order.md)
-    * [Delete Order](docs/api_delete_order.md)
-- [Testing Instructions](docs/testing.md)
-
 ## Installation Setup 
 - Create a folder and, from within it, clone this repo from github (digit token when asked to entry password)
 ```java
