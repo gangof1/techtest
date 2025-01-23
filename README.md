@@ -46,9 +46,11 @@ To prevent SQL Injections, the app makes use of validation of user inputs and of
 ## Documentation
 - [Setup Guide](docs/setup.md)
 - [Consuming API Guide](docs/api.md)
- * API1
- * API2
- * API3  
+    * [Order Viewing Page](docs/api_order_viewing_page.md)
+    * [Detailed Order View](docs/api_detailed_order_view.md)
+    * [Create Order](docs/api_crate_order.md)
+    * [Update Order](docs/api_update_order.md)
+    * [Delete Order](docs/api_delete_order.md)
 - [Testing Instructions](docs/testing.md)
 
 ## Installation Setup 
