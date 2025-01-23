@@ -43,6 +43,14 @@ To prevent SQL Injections, the app makes use of validation of user inputs and of
 - Git Installed <a href="https://git-scm.com/downloads">official Git website</a>
 - <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a> installed
 
+## Documentation
+- [Setup Guide](docs/setup.md)
+- [Consuming API Guide](docs/api.md)
+- * API1
+- * API2
+- * API3  
+- [Testing Instructions](docs/testing.md)
+
 ## Installation Setup 
 - Create a folder and, from within it, clone this repo from github (digit token when asked to entry password)
 ```java
