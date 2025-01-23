@@ -13,11 +13,11 @@
 #### Content-Type: application/json
 
 
-- [GET] - [Order Viewing Page](#Order-Viewing-Page) 
-- [GET] - [Detailed Order View](#Detailed-Order-View)  
-- [POST] - [Create Order](#Create-Order) 
-- [PUT] - [Update Order](#Update-Order) 
-- [DELETE] - [Delete Order](#Delete-Order)  
+- [GET] - [Order Viewing Page](docs/api_order_viewing_page.md) 
+- [GET] - [Detailed Order View](docs/api_detailed_order_view.md)  
+- [POST] - [Create Order](docs/api_create_order.md) 
+- [PUT] - [Update Order](docs/api_update_order.md) 
+- [DELETE] - [Delete Order](docs/api_delete_order.md)  
 
 ## General purposes
 
