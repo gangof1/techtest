@@ -7,6 +7,8 @@ In the root of the project, execute
 ```
 to run all APIs tests
 
+### List of implemented tests:
+
 ##### Order Viewing Page
 - [x] it returns a successful response
 - [x] it handles wrong date when provided
