@@ -1,4 +1,4 @@
-[⬅️ Torna alla home](../README.md)
+[⬅️ Back to home](../README.md)
 
 ## Testing 
 In the root of the project, execute

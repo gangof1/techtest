@@ -1,4 +1,4 @@
-[⬅️ Torna alla home](../README.md)
+[⬅️ Back to home](../README.md)
 
 API Consumption
 To interact with the Restful API, we recommend using cURL or Postman.
