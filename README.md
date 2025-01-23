@@ -43,8 +43,10 @@ To prevent SQL Injections, the app makes use of validation of user inputs and of
 - Git Installed <a href="https://git-scm.com/downloads">official Git website</a>
 - <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a> installed
 
+## Installation / setup
+Please see [Setup Guide](docs/setup.md) to proceed
+
 ## Documentation
-- [Setup Guide](docs/setup.md)
 - [API Consumption Guide](docs/api.md)
     * [Order Viewing Page](docs/api_order_viewing_page.md)
     * [Detailed Order View](docs/api_detailed_order_view.md)
