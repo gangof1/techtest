@@ -46,9 +46,9 @@ To prevent SQL Injections, the app makes use of validation of user inputs and of
 ## Documentation
 - [Setup Guide](docs/setup.md)
 - [Consuming API Guide](docs/api.md)
-- * API1
-- * API2
-- * API3  
+ * API1
+ * API2
+ * API3  
 - [Testing Instructions](docs/testing.md)
 
 ## Installation Setup 
