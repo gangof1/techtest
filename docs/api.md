@@ -12,6 +12,6 @@ Using Postman:
 * Enter the appropriate API URL.
 * For POST and PUT requests, include the request body or parameters as needed.
 
-A postman collection for testing purpose is available in `docs` folder, see [TechTest.postman_collection](TechTest.postman_collection)
+A postman collection for testing purpose is available in `docs` folder, see [TechTest.postman_collection](TechTest.postman_collection.json)
 
 For more detailed instructions, refer to each endpoint's section in this documentation.
