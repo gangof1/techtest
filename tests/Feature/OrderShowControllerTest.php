@@ -3,18 +3,16 @@
 namespace Tests\Feature;
 
 use App\Models\Order;
-use Database\Seeders\OrderSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class OrderShowControllerTest extends TestCase
+class OrderShowControllerTest extends BaseOrderControllerTest
 {
     use RefreshDatabase;
 
     public function test_it_returns_a_successful_response()
     {
-        $this->seed();
+        $this->createOrderWithProducts();
 
         $latestOrder = Order::latest()->first();
 
@@ -25,7 +23,7 @@ class OrderShowControllerTest extends TestCase
 
     public function test_it_returns_products_belonging_to_order()
     {
-        $this->seed();
+        $this->createOrderWithProducts();
 
         $latestOrder = Order::latest()->first();
 

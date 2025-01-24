@@ -3,18 +3,16 @@
 namespace Tests\Feature;
 
 use App\Models\Order;
-use Database\Seeders\OrderSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class OrderDeleteControllerTest extends TestCase
+class OrderDeleteControllerTest extends BaseOrderControllerTest
 {
     use RefreshDatabase;
 
     public function test_it_delete_order()
     {
-        $this->seed();
+        $this->createOrderWithProducts();
 
         $latestOrder = Order::latest()->first();
 

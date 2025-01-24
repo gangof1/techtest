@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-
+use Database\Seeders\ProductSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Tests\TestCase;
@@ -32,7 +32,7 @@ class OrderStoreControllerTest extends TestCase
 
     public function test_it_returns_an_error_if_stock_is_not_enough()
     {
-        $this->seed();
+        $this->seed(ProductSeeder::class);
 
         $lastProduct = DB::table('products')->orderBy('id', 'desc')->first();
 
@@ -56,7 +56,7 @@ class OrderStoreControllerTest extends TestCase
 
     public function test_it_returns_an_error_if_products_are_not_unique()
     {
-        $this->seed();
+        $this->seed(ProductSeeder::class);
 
         $lastProduct = DB::table('products')->orderBy('id', 'desc')->first();
 
@@ -78,7 +78,7 @@ class OrderStoreControllerTest extends TestCase
 
     public function test_store_success()
     {
-        $this->seed();
+        $this->seed(ProductSeeder::class);
 
         $sampleProducts = DB::table('products')
         ->orderBy('id', 'asc')
