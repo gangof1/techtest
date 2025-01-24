@@ -1,7 +1,7 @@
 [⬅️ Back to home](../README.md)
 
 API Consumption
-To interact with the Restful API, we recommend using cURL or Postman.
+Interacting with Restful APIs, can be done using various tools and programming languages. Here are some common methods: cURL, Guzzle, JavaScript, Postman (User-friendly UI)
 
 Example using cURL:
 ```java
@@ -12,6 +12,6 @@ Using Postman:
 * Enter the appropriate API URL.
 * For POST and PUT requests, include the request body or parameters as needed.
 
-A postman collection for testing purpose is available in `docs` folder, see [TechTest.postman_collection](TechTest.postman_collection.json)
+A postman collection for testing purpose is available in `docs` folder, see [TechTest.postman_collection](TechTest.postman_collection.json).
 
 For more detailed instructions, refer to each endpoint's section in this documentation.

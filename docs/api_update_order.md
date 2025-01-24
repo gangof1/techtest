@@ -4,7 +4,8 @@
 - Method: PUT
 - URL: [Base URL] /api/orders/{order id}*
 - Description: Updates an existing order
-- Response: JSON object representing the updated order with associated products
+- Response (on success): JSON object representing the updated order with associated products
+- Status code (on success): 200
 - Response (on failure): JSON reporting error code and message
 
 > ##### *Please substitute {order id} with desired order #id. 

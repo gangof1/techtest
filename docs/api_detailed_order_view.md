@@ -4,7 +4,8 @@
 - Method: GET
 - URL: [Base URL] /api/orders/{order id}*
 - Description: Retrieves details about a specific order specified by #id. 
-- Response: JSON object displaying order information along with associated products
+- Response (on success): JSON object displaying order information along with associated products
+- Status code (on success): 200
 - Response (on failure): JSON reporting error code and message
 
 > ##### *Please substitute {order id} with desired order #id. 

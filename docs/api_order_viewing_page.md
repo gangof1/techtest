@@ -4,7 +4,8 @@
 - Method: GET
 - URL: [Base URL] /api/orders
 - Description: Retrieves a list of orders - ordered by date desc - with pagination and filtering options
-- Response: JSON object of paginated orders with total count and links for next/prev pages
+- Response (on success): JSON object of paginated orders with total count and links for next/prev pages 
+- Status code (on success): 200
 - Response (on failure): JSON reporting error code and message
 
 ## Query Parameters
