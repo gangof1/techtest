@@ -10,7 +10,7 @@ curl -X GET "[base URL]/api/orders" -H "Accept: application/json"
 Using Postman:
 * Open Postman and select the desired HTTP method (GET, POST, PUT, DELETE).
 * Enter the appropriate API URL.
-* For POST and PUT requests, include the request body or parameters as needed.
+* For POST and PATCH requests, include the request body or parameters as needed.
 
 A postman collection for testing purpose is available in `docs` folder, see [TechTest.postman_collection](TechTest.postman_collection.json).
 

@@ -1,7 +1,7 @@
 [⬅️ Back to home](../README.md)
 
 # Update Order
-- Method: PUT
+- Method: PATCH
 - URL: [Base URL] /api/orders/{order id}*
 - Description: Updates an existing order
 - Response (on success): JSON object representing the updated order with associated products

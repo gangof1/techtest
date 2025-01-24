@@ -16,7 +16,7 @@
 - [GET] - [Order Viewing Page](docs/api_order_viewing_page.md) 
 - [GET] - [Detailed Order View](docs/api_detailed_order_view.md)  
 - [POST] - [Create Order](docs/api_create_order.md) 
-- [PUT] - [Update Order](docs/api_update_order.md) 
+- [PATCH] - [Update Order](docs/api_update_order.md) 
 - [DELETE] - [Delete Order](docs/api_delete_order.md)  
 
 ## General purposes
