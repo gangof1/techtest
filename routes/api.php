@@ -19,5 +19,5 @@ Route::get('/user', function (Request $request) {
 Route::get('/orders', [OrderIndexController::class, 'index'])->name('orders.index');
 Route::get('/orders/{order}', [OrderShowController::class, 'show'])->name('orders.show');
 Route::post('/orders', [OrderStoreController::class, 'store'])->name('orders.store');
-Route::put('/orders/{order}', [OrderUpdateController::class, 'update'])->name('orders.update');
+Route::patch('/orders/{order}', [OrderUpdateController::class, 'update'])->name('orders.update');
 Route::delete('/orders/{order}', [OrderDeleteController::class, 'destroy']);
