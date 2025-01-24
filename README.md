@@ -35,7 +35,7 @@ According to the specified requirements, concurrency control is used when updati
 To enhance order search functionality, API Order Viewing Page interacts with Laravel Scout/Meilisearch  to implement indexing solution to manage efficient searching and filtering
 
 ## Security
-Though not implemented at present, API's are supposed to be, in a future release, accessible only through "personal access tokens" (Laravel Sacntum, token should be included in the Authorization header as a Bearer token)
+Though not implemented yet, API's are supposed to be, in a future release, accessible only through "personal access tokens" (Laravel Sacntum, token should be included in the Authorization header as a Bearer token)
 To prevent SQL Injections, the app makes use of validation of user inputs and of Eloquent ORM (parameterized queries, SQL bindings) 
 
 ## Requirements

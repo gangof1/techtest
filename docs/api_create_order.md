@@ -36,7 +36,7 @@
 |Error code|Error Description|
 |---|---|
 |422| Validation error|
-|400| Bad Request (stock is not enough?)|
+|400| Bad Request (stock is not enough)|
 
 ### Response (on success) example
 ```java

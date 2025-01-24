@@ -21,6 +21,7 @@
 ```java
 {
     "success": true,
-    "message": "Order deleted successfully"
+    "message": "Order deleted successfully",
+    "status": 200
 }
 ```
