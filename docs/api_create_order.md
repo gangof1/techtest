@@ -4,7 +4,8 @@
 - Method: POST
 - URL: [Base URL] /api/orders
 - Description: Creates a new order
-- Response: JSON object representing the newly created order with associated products
+- Response (on success): JSON object representing the newly created order with associated products 
+- Status code (on success): 201
 - Response (on failure): JSON reporting error code and message
 
 ### Request Body (JSON)
