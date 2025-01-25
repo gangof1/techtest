@@ -2,7 +2,7 @@
 
 ## Testing 
 In the root of the project, execute
-```java
+```
 ./vendor/bin/sail php artisan test
 ```
 to run all APIs tests

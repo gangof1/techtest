@@ -17,7 +17,7 @@
 |404| Resource not found|
 
 ### Response (on success) example
-```java
+```
 {
     "id": 4,
     "name": "Order Consequatur.",

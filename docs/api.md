@@ -4,7 +4,7 @@ API Consumption
 Interacting with Restful APIs, can be done using various tools and programming languages. Here are some common methods: cURL, Guzzle, JavaScript, Postman (User-friendly UI)
 
 Example using cURL:
-```java
+```
 curl -X GET "[base URL]/api/orders" -H "Accept: application/json"
 ```
 Using Postman:

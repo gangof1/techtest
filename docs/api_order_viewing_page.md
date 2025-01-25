@@ -27,7 +27,7 @@
 
 
 ### Response (on success) example
-```java
+```
 {
     "current_page": 1,
     "data": [

@@ -18,7 +18,7 @@
 |400| Error|
 
 ### Response (on success) example
-```java
+```
 {
     "success": true,
     "message": "Order deleted successfully",

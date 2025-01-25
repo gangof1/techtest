@@ -12,7 +12,7 @@
 > ##### es. [Base URL] /api/orders/1
 
 ### Request Body (JSON)
-```java
+```
 {
     "name": "ordine di test",
     "description": "ordine di test",
@@ -43,7 +43,7 @@
 |404| Resource not found|
 
 ### Response (on success) example
-```java
+```
 {
     "id": 1,
     "name": "Ordine di test 1",
