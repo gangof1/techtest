@@ -9,7 +9,7 @@
 - Response (on failure): JSON reporting error code and message
 
 ### Request Body (JSON)
-```java
+```
 {
     "name": "ordine di test",
     "description": "ordine di test",
@@ -39,7 +39,7 @@
 |400| Bad Request (stock is not enough)|
 
 ### Response (on success) example
-```java
+```
 {
     "name": "ordine di test",
     "description": "ordine di test",
