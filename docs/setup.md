@@ -1,7 +1,7 @@
 [⬅️ Back to home](../README.md)
 
 ## Installation Setup 
-- Create a folder and, from within it, clone this repo from github (digit token when asked to entry password)
+- Create a folder and, from within it, clone this repo from github
 ```
 git clone https://github.com/gangof1/techtest.git ./
 ```
