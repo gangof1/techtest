@@ -31,8 +31,8 @@ docker run --rm \
 ./vendor/bin/sail php artisan migrate --seed
 ```
 - This will:
-* Run all database migrations to set up the necessary tables.
-* Seed tables with some initial data.
+  * Run all database migrations to set up the necessary tables.
+  * Seed tables with some initial data.
 
 - Apply Meilisearch configured index settings 
 ```
@@ -41,5 +41,5 @@ sail php artisan scout:sync-index-settings
 #### Hints:
 * 500 orders will have been created, each order with 1 or 2 products assigned with a fixed quantity: 1. 
   * for testing purposes orders will be dated between '`2025-01-01`', '`2025-03-31`' and each one will have '`Order ....`' as name and '`Order description ...`' as descritpion
-* 100 Products will have been created too, each with stock set to 500. 
+* 100 Products will have been created too, each with starting stock set to 500. 
 * Consider starting creating a new order or pick an order having #id between 1-500 to test any other API call that require existing order data.
