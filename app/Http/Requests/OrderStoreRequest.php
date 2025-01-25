@@ -23,7 +23,7 @@ class OrderStoreRequest extends ApiFormRequest
     {
         return [
             'name' => 'required|string|max:255|unique:orders,name',
-            'description' => 'nullable|string|max:1000',
+            'description' => 'nullable|string|max:255',
             'products' => [
                 'required',
                 'array',

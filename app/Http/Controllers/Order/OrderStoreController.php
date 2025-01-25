@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Order;
 
+use App\ErrorHandlingTrait;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\OrderStoreRequest;
 use App\Models\Order;
@@ -11,6 +12,8 @@ use Illuminate\Support\Facades\DB;
 
 class OrderStoreController extends Controller
 {
+    use ErrorHandlingTrait;
+
     /**
      * Store a newly created resource in storage.
      */
@@ -21,7 +24,7 @@ class OrderStoreController extends Controller
             $result = DB::transaction(function () use ($validatedData) {
                 $order = Order::create([
                     'name' => $validatedData["name"],
-                    'description' => $validatedData["description"],
+                    'description' => $validatedData["description"] ?? null,
                     'date' => $validatedData["date"]?? now(),
                 ]);
 
@@ -43,21 +46,13 @@ class OrderStoreController extends Controller
             });
 
             return response()->json($result, 201);
-            /*
-            return response()->json([
-                'success' => true,
-                'message' => 'Order created successfully'
-            ], 201);
-            */
+
+            //return $this->handleSuccess('Order created successfully', 201);
+
 
         } catch (\Exception $e) {
-            logger()->error('Non è stato possibile procedere alla creazione dell\'ordine: ' . $e->getMessage());
-            return response()->json([
-                'success' => false,
-                'error' => 'operation_failed',
-                'message' => $e->getMessage(),
-                'status' => 400
-            ], 400);
+            logger()->error('Order could not be created: ' . $e->getMessage());
+            return $this->handleError('Order could not be created: ' . $e->getMessage(), 400);
         }
     }
 }

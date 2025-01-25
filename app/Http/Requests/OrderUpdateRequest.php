@@ -27,7 +27,7 @@ class OrderUpdateRequest extends ApiFormRequest
 
         return [
             'name' => 'nullable|string|max:255|unique:orders,name,' . $order_id,
-            'description' => 'nullable|string|max:1000',
+            'description' => 'nullable|string|max:255',
             'products' => [
                 'required',
                 'array',

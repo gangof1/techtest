@@ -18,7 +18,7 @@ class OrderFactory extends Factory
     {
         return [
             'name' => "Order " .fake()->unique()->sentence(2),
-            'description' => "Order " .fake()->sentence(10),
+            'description' => "Order description " .fake()->sentence(7),
             //'date' => fake()->dateTimeThisYear(),
             'date' => fake()->dateTimeBetween('2025-01-01', '2025-03-31'),
             'created_at' => now(),

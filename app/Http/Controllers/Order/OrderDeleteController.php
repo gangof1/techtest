@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Order;
 
+use App\ErrorHandlingTrait;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use Illuminate\Http\JsonResponse;
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class OrderDeleteController extends Controller
 {
+    use ErrorHandlingTrait;
     /**
      * Remove the specified resource from storage.
      */
@@ -30,19 +32,11 @@ class OrderDeleteController extends Controller
 
             });
 
-            return response()->json([
-                'success' => true,
-                'message' => 'Order deleted successfully'
-            ], 200);
+            return $this->handleSuccess('Order deleted successfully');
 
         } catch (\Exception $e) {
-            logger()->error('Errore durante l\'eliminazione dell\'ordine: ' . $e->getMessage());
-            return response()->json([
-                'success' => false,
-                'error' => 'operation_failed',
-                'message' => $e->getMessage(),
-                'status' => 500
-            ], 500);
+            logger()->error('Error while attempting to delete order: ' . $e->getMessage());
+            return $this->handleError($e->getMessage(), 400);
         }
     }
 }

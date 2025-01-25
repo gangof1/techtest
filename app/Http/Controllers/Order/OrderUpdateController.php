@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Order;
 
+use App\ErrorHandlingTrait;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\OrderUpdateRequest;
 use App\Models\Order;
@@ -12,12 +13,15 @@ use Illuminate\Support\Facades\DB;
 
 class OrderUpdateController extends Controller
 {
+    use ErrorHandlingTrait;
+
     /**
      * Update the specified resource in storage.
      */
     public function update(OrderUpdateRequest $request, Order $order):JsonResponse
     {
         $validatedData = $request->validated();
+
         try {
             $result = DB::transaction(function () use ($validatedData, $order) {
                 // reset previous stock availability
@@ -41,11 +45,11 @@ class OrderUpdateController extends Controller
 
                     $order->products()->attach($product->id, ['quantity' => $productData['quantity']]);
 
-                    if ((!empty($validatedData["name"])) && (trim($validatedData["name"]) !=='')){
+                    if (!empty($validatedData["name"])){
                         $order->update(['name' => $validatedData["name"]]);
                     }
-                    if ((!empty($validatedData["description"])) && (trim($validatedData["description"]) !=='')){
-                        $order->update(['description' => $validatedData["description"]]);
+                    if (request()->has('description')){
+                        $order->update(['description' => $validatedData["description"] ]);
                     }
                     if (isset($validatedData['date'])) {
                         $order->update(['date' => $validatedData['date']]);
@@ -57,20 +61,12 @@ class OrderUpdateController extends Controller
             });
 
             return response()->json($result, 200);
-            /*
-            return response()->json([
-                'success' => true,
-                'message' => 'Order updated successfully'
-            ], 200);
-            */
+
+            //return $this->handleSuccess('Order created successfully', 200');
+
         } catch (\Exception $e) {
-            logger()->error('Errore durante l\'aggiornamento dell\'ordine: ' . $e->getMessage());
-            return response()->json([
-                'success' => false,
-                'error' => 'operation_failed',
-                'message' => $e->getMessage(),
-                'status' => 400
-            ], 400);
+            logger()->error('Order could not be updated: ' . $e->getMessage());
+            return $this->handleError('Order could not be updated: ' . $e->getMessage(), 400);
         }
     }
 }
